@@ -10,8 +10,8 @@ const { notes, addNote, deleteNote, search, filteredNotes } = useNotes()
 
 <template>
   <BaseCard>
-    <NoteForm @add="addNote" />
     <input v-model="search" placeholder="Suchen..." />
+    <NoteForm @add="addNote" />
     <NoteCard
       v-for="note in filteredNotes"
       :key="note.id"
@@ -19,4 +19,4 @@ const { notes, addNote, deleteNote, search, filteredNotes } = useNotes()
       @delete="deleteNote"
     />
   </BaseCard>
-</template>
+  </template>

@@ -31,5 +31,5 @@ export function useNotes() {
     )
   }) 
  
-  return { notes, addNote, deleteNote, filteredNotes }
+  return { notes, addNote, deleteNote, search, filteredNotes }
 }

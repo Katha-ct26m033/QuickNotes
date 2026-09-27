@@ -26,9 +26,28 @@ function submitNote() {
 
 <template>
     <form @submit.prevent="submitNote">
-        <input v-model="tippedTitle"/>
-        <textarea v-model="tippedText"></textarea>
+        <input v-model="tippedTitle" placeholder="Add title"/>
+        <textarea v-model="tippedText" placeholder="Add content"></textarea>
         <input v-model="tippedTags" placeholder="Tags (Komma-getrennt)"/>
         <button type="submit">Add note</button>
     </form>
 </template>
+
+<style scoped>
+  /* CSS-Regeln, die NUR für diese Komponente gelten */
+  form {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    align-items: center;
+    padding: 24px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: 12px;
+    font-kerning: normal;
+
+  }
+
+  input, textarea {
+    width: 280px;
+  }
+</style>

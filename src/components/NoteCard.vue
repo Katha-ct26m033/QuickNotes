@@ -6,8 +6,44 @@ const emit = defineEmits(['delete'])
 </script>
 
 <template>
-    <h3>{{ note.title }}</h3>
-    <p>{{ note.content }}</p>
-    <span v-for="tag in note.tags" :key="tag">{{ tag }}</span>
-    <button @click="emit('delete', note.id)">Delete note</button> 
+    <div class="note-card">
+        <p>{{ note.title }}</p>
+        <p>{{ note.content }}</p>
+        <div class="tags-wrapper">
+            <span v-for="tag in note.tags" :key="tag" class="tag">{{ tag }}</span>
+        </div>
+        <button @click="emit('delete', note.id)">Delete note</button> 
+    </div>
 </template>
+
+<style scoped>
+
+.note-card {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    background-color: #eff0f4;     
+    border-radius: 8px;        
+    padding: 12px 16px;  
+    align-items: center;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: 16px;
+    margin: 0;
+    font-kerning: normal;
+
+}
+
+.tag {
+  background-color: #dbdde4;  
+  border-radius: 999px;        
+  padding: 2px 10px;           
+  margin-right: 6px;
+  font-size: 12px;
+}
+
+button {
+    padding: 8px;
+}
+
+
+</style>
