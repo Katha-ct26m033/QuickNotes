@@ -19,4 +19,4 @@ const { notes, addNote, deleteNote, search, filteredNotes } = useNotes()
       @delete="deleteNote"
     />
   </BaseCard>
-  </template>
+</template>

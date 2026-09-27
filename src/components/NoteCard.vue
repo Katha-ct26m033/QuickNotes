@@ -21,16 +21,11 @@ const emit = defineEmits(['delete'])
 .note-card {
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
     background-color: #eff0f4;     
     border-radius: 8px;        
     padding: 12px 16px;  
     align-items: center;
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    font-size: 16px;
-    margin: 0;
-    font-kerning: normal;
-
+    justify-content: space-between;
 }
 
 .tag {
@@ -44,6 +39,4 @@ const emit = defineEmits(['delete'])
 button {
     padding: 8px;
 }
-
-
 </style>

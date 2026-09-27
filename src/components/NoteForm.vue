@@ -38,16 +38,20 @@ function submitNote() {
   form {
     display: flex;
     flex-direction: column;
-    gap: 16px;
     align-items: center;
-    padding: 24px;
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    font-size: 12px;
-    font-kerning: normal;
-
-  }
-
-  input, textarea {
+    margin: 0 auto;
     width: 280px;
+    padding: 24px;
+    gap: 16px;
   }
+
+  input, textarea, button {
+    width: 100%;      
+    box-sizing: border-box;   
+  }
+
+  form {
+    align-items: stretch;  
+  }
+
 </style>

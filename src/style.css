@@ -52,6 +52,7 @@
 
 body {
   margin: 0;
+  font-family: 'Lucida Sans', 'Lucida Grande', Geneva, Verdana, sans-serif;
 }
 
 h1,
@@ -81,6 +82,10 @@ h2 {
 }
 p {
   margin: 0;
+}
+
+input, textarea, button {
+  font-family: inherit;
 }
 
 code,
