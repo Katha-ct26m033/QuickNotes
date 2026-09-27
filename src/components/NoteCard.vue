@@ -26,6 +26,7 @@ const emit = defineEmits(['delete'])
     padding: 12px 16px;  
     align-items: center;
     justify-content: space-between;
+    margin: 0 0 24px 0;
 }
 
 .tag {
