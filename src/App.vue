@@ -1,7 +1,7 @@
 <script setup lang="ts">
-import HelloWorld from './components/HelloWorld.vue'
+import BaseCard from './components/BaseCard.vue'
 </script>
 
 <template>
-  <HelloWorld />
+  <BaseCard />
 </template>
