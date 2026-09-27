@@ -6,8 +6,7 @@ export function useNotes() {
   const search = ref('')
  
   function addNote(newNote) {
-    // TODO: neue Notiz mit eigener id an die Liste hängen
-    notes.value.push( { ...newNote, id: Date.now() } ); 
+  notes.value.push({ ...newNote, id: Date.now() })
   }
  
   function deleteNote(noteId) {

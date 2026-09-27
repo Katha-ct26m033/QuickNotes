@@ -8,9 +8,3 @@
     </div>
   </div>
 </template>
-
-<style scoped>
-.card {
-  padding: 24px;
-}
-</style>

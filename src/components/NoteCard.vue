@@ -1,21 +1,23 @@
-<script setup>
-const props = defineProps({
-  note: { type: Object, required: true }
-})
-const emit = defineEmits(['delete'])
+<script setup lang="ts">
+import BaseCard from './BaseCard.vue'
+import type { Note } from '../types/notes.ts'
+
+const props = defineProps<{ note: Note }>()
+const emit = defineEmits<{ (e: 'delete', id: number): void }>()
 </script>
 
 <template>
+  <BaseCard>
     <div class="note-card">
-        <p>{{ note.title }}</p>
+        <p class="title">{{ note.title }}</p>
         <p>{{ note.content }}</p>
         <div class="tags-wrapper">
-            <span v-for="tag in note.tags" :key="tag" class="tag">{{ tag }}</span>
+        <span v-for="tag in note.tags" :key="tag" class="tag">{{ tag }}</span>
         </div>
-        <button @click="emit('delete', note.id)">Delete note</button> 
+        <button @click="emit('delete', note.id)">Delete note</button>
     </div>
+  </BaseCard>
 </template>
-
 <style scoped>
 
 .note-card {
@@ -26,7 +28,7 @@ const emit = defineEmits(['delete'])
     padding: 12px 16px;  
     align-items: center;
     justify-content: space-between;
-    margin: 0 0 24px 0;
+    margin: 24px;
 }
 
 .tag {
