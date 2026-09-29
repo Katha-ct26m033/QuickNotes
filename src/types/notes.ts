@@ -4,4 +4,3 @@ export interface Note {
   content: string
   tags: string[]
 }
-
